@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import EntryForm from './entryForm'
 import EntryList from './entryList'
 
+
 export default class Entry extends Component {
     constructor(props) {
         super(props)
@@ -15,8 +16,6 @@ export default class Entry extends Component {
 
     }
 
- 
-    
     handleDescription(e) {
          this.setState({...this.state, description: e.target.value})
     }
@@ -33,21 +32,22 @@ export default class Entry extends Component {
     cleanInput() {
         this.setState({ description: '', location: ''});
     }
-
+    
     render() {
         return (
             <div>
-                <h1> Time Machine </h1>
+                <h1> Time Entries </h1>
                 <EntryForm description={this.state.description}
                 location={this.state.location}
                 handleDescription={this.handleDescription}
                 handleLocation={this.handleLocation}
                  />
-                
                 <button onClick={this.handleAdd} className="btn">+</button>
+                <h2>{this.state.list.length !== 0 ? 'Hop back in time' : ''}</h2>
 
                 <EntryList list={this.state.list} 
-                locationList={this.state.locationList} />
+                locationList={this.state.locationList} 
+                location={this.state.location}/>
             </div>
         )
     }
