@@ -2,7 +2,6 @@ import React from 'react'
 
 import EntryWeather from '../Entry/entryWeather'
 
-
 export default props => {
     let locationList = props.locationList || []
     let list = props.list || []
@@ -11,7 +10,7 @@ export default props => {
         <div key={'weather'+index} >
        <p key={'place'+index} className="location-text">{value}</p> <p key={'content'+index} className="description-text">{list[index]}</p>
 
-       <EntryWeather latitude={null} longitude={-52.3594} location={value}/>
+       <EntryWeather userLat={props.userLat} userLong={props.userLong} location={value}/>
        </div>
        );
 
