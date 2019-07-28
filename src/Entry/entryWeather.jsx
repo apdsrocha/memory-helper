@@ -32,9 +32,9 @@ class EntryWeather extends Component {
             let countryId = data.sys.country
             let icon = data.weather[0]['icon']
             this.setState({city: city});
-            this.setState({icon: icon});
-            this.setState({temperature: Math.round(temperature)});
+            this.setState({temperature: temperature});
             this.setState({countryId: countryId});
+            this.setState({icon: icon});
         }).catch((error) => {
                 this.setState({error: error});
         });
