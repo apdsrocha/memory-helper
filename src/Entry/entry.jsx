@@ -34,8 +34,8 @@ export default class Entry extends Component {
     
     render() {
         return (
-            <div>
-                <h1> Time Entries </h1>
+            <div className="form_and_entries">
+                <div className="form__box">
                 <EntryForm description={this.state.description}
                 location={this.state.location}
                 handleDescription={this.handleDescription}
@@ -43,15 +43,20 @@ export default class Entry extends Component {
                 userLat={this.props.userLat}
                 userLong={this.props.userLong}
                  />
-                <button onClick={this.handleAdd} className="btn">+</button>
-                <h2>{this.state.list.length !== 0 ? 'Hop back in time' : ''}</h2>
+                    <div className="btn--align-center">
+                        <button onClick={this.handleAdd} className="btn--blue">Save it</button>
+                    </div>
+                </div>
+                <div className="entries__list">
+                    <h2 className="entries__title">{this.state.list.length !== 0 ? 'Remember when...' : ''}</h2>
 
-                <EntryList list={this.state.list} 
-                locationList={this.state.locationList} 
-                location={this.state.location}
-                userLat={this.props.userLat}
-                userLong={this.props.userLong}
-                />
+                    <EntryList list={this.state.list} 
+                    locationList={this.state.locationList} 
+                    location={this.state.location}
+                    userLat={this.props.userLat}
+                    userLong={this.props.userLong}
+                    />
+                </div>
             </div>
         )
     }

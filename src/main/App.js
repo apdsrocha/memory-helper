@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import './App.css';
 import Entry from '../Entry/entry'
 import LocationInfo from '../Entry/locationInfo'
+import Header from '../Header/header'
 
 export default class App extends Component {
   constructor(props) {
@@ -22,10 +22,11 @@ handleLocation(latitude, longitude) {
 
  render() {
    return (
-      <div className="container">
-        <Entry userLat={this.state.userLat} userLong={this.state.userLong} />
-        <LocationInfo handleLocation={this.handleLocation}/>
-      </div>
+        <div>
+          <Header />
+          <Entry userLat={this.state.userLat} userLong={this.state.userLong} />
+          <LocationInfo handleLocation={this.handleLocation}/>
+        </div>
       )
     }
  }
