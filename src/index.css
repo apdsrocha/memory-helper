@@ -126,8 +126,8 @@ header {
 }
 @media only screen and (min-width: 1024px) {
   .form__box {
-    margin: 8%;
-    padding: 3%;
+    margin: 6%;
+    padding: 2% 3%;
     min-width: 320px;
     border-radius: 12px;
   }
@@ -192,6 +192,7 @@ input {
   justify-content: center;
   align-content: center;
   margin: 2%;
+  min-width: 400px;
 }
 
 .description-text {
