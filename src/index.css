@@ -84,7 +84,7 @@ header {
 
 .header__subtitle {
   color: #2E2C70;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 100;
 }
 @media only screen and (min-width: 768px) {
@@ -192,7 +192,12 @@ input {
   justify-content: center;
   align-content: center;
   margin: 2%;
-  min-width: 400px;
+  min-width:290px;
+}
+@media only screen and (min-width: 768px) {
+  .card {
+    min-width: 400px;
+  }
 }
 
 .description-text {

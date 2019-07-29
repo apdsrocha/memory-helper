@@ -44,7 +44,7 @@ class EntryWeather extends Component {
         <div>
             { this.state.error !== null ? <h4>Invalid city, try again.</h4> : 
             <div className="weather"> 
-            <img alt="icon" src={require('http://openweathermap.org/img/wn/' + this.state.icon + '@2x.png')} />
+            <img alt="icon" src={'http://openweathermap.org/img/wn/' + this.state.icon + '@2x.png'} />
             <p className="temperature">{Math.round(this.state.temperature)} °C</p>
             <p className="city">{this.state.city} - {this.state.countryId}</p>
             </div>

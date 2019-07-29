@@ -12,7 +12,7 @@ export default props => (
     </div>
     }
     <div className="label-input--align">
-      <label className="label--text">Here's what:</label>
+      <label className="label--text">Here's what happened:</label>
       <textarea id="description" type="text" placeholder="" onChange={props.handleDescription} value={props.description}>
       </textarea>
     </div>
