@@ -237,6 +237,10 @@ input {
   font-family: 'Roboto';
   font-size: 12px;
 }
+.img-icon {
+  width: 90px;
+  height: 90px;
+}
 
 /* Desktop requirements */
 
