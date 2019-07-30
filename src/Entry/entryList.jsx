@@ -22,7 +22,7 @@ export default props => {
 
     return (
         <div>
-            {infoCard}
+            {infoCard.slice(0).reverse()}
         </div>
     ) 
 }
