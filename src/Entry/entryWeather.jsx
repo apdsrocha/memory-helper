@@ -17,7 +17,6 @@ class EntryWeather extends Component {
             temperature: '',
             countryId: '',
             condition: '',
-            icon: '',
             error: null,
             location: this.props.location,
             userLat: this.props.userLat,

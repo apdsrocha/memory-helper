@@ -3,7 +3,7 @@ import { usePosition } from 'use-position'
 
 
 export default (props) => {
-    const { latitude, longitude, error } = usePosition(true);
+    const { latitude, longitude } = usePosition(true);
 
     useEffect(() => {
         props.handleLocation(latitude, longitude )
