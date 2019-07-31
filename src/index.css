@@ -186,7 +186,11 @@ input {
   padding-top: 5%;
   margin-left: 2%;
 }
-
+@media only screen and (min-width: 1024px) {
+  .entries__list {
+    margin-right: 6%
+  }
+}
 .card {
   background-color: #ffffff;
   border: 1px #2E2C70 solid;
