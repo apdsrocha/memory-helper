@@ -25,6 +25,7 @@
        url('./assets/fonts/montserrat-v14-latin-100.ttf') format('truetype'), /* Safari, Android, iOS */
        url('./assets/fonts/montserrat-v14-latin-100.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
+
 /* Webfont: Montserrat-Regular */
 @font-face {
   font-family: 'Montserrat';
@@ -53,7 +54,6 @@
 }
 
 /* General Settings */
-
 #app {
   max-width: 1300px;
   margin: auto;
@@ -68,12 +68,12 @@ body {
 }
 
 /* Header */ 
-
 header {
   display: flex;
   flex-direction: row;
   margin-left: 2%;
 }
+
 .header__title {
   color: #2E2C70;
   font-family: 'Roboto';
@@ -90,6 +90,11 @@ header {
   color: #2E2C70;
   font-size: 12px;
   font-weight: 100;
+}
+@media only screen and (min-width: 450px) {
+  .header__subtitle {
+    font-size: 14px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .header__subtitle {
@@ -108,6 +113,7 @@ header {
     width: 55%;
   }
 }
+
 .header__img {
   width: 50%;
   margin-top: 20%;
@@ -127,6 +133,7 @@ header {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
+  z-index: 9999;
 }
 @media only screen and (min-width: 1024px) {
   .form__box {
@@ -136,15 +143,18 @@ header {
     border-radius: 12px;
   }
 }
+
 .label-input--align {
   display: flex;
   flex-direction: column;
   padding: 2% 0;
 }
+
 .label--text {
   font-weight: 400;
   font-size: 16px;
 }
+
 .btn--blue {
   background-color: #2E2C70;
   border-radius: 4px;
@@ -157,10 +167,12 @@ header {
   font-size: 14px;
   margin-top: 5%;
 }
+
 .btn--align-center {
   display: flex;
   justify-content: center;
 }
+
 input {
   border: none;
   border-radius: 4px;
@@ -169,6 +181,7 @@ input {
   color: #707070;
   font-family: 'Montserrat'
 }
+
 #description {
   height: 40px;
   border: none;
@@ -177,6 +190,7 @@ input {
   color: #707070;
   font-family: 'Montserrat'
 }
+
 /* Entries */
 .entries__title {
   color: #2E2C70;
@@ -191,6 +205,7 @@ input {
     margin-right: 6%
   }
 }
+
 .card {
   background-color: #ffffff;
   border: 1px #2E2C70 solid;
@@ -231,12 +246,14 @@ input {
   align-items: center;
   min-width: 120px;
 }
+
 .temperature {
   color: #FF747C;
   font-size: 35px;
   font-weight: 700;
   margin: 0;
 }
+
 .city {
   font-family: 'Roboto';
   font-size: 12px;
@@ -246,17 +263,35 @@ input {
     font-size: 14px;
   }
 }
+
 .date {
   font-family: 'Roboto';
   font-size: 12px;
 }
+
 .img-icon {
   width: 45px;
   height: 45px;
+  padding-top: 15px;
+}
+
+.error-handling {
+  width: 100px;
+  text-align: center;
+}
+
+/* Animation */
+.fadein {
+  transition-timing-function: ease-in;
+  animation: fadein 2s ;
+  animation-fill-mode: forwards;  
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 /* Desktop requirements */
-
 @media only screen and (min-width: 1024px) {
   .form_and_entries {
   display: flex;

@@ -11,7 +11,7 @@ export default props => {
     let list = props.list || []
     let frozenTime = String(freeze(time))
     let infoCard = locationList.map((value, index) =>
-        <div className="card" key={'card'+index}>
+        <div className="card fadein" key={'card'+index}>
             <EntryWeather userLat={props.userLat} userLong={props.userLong} location={value}/>
             <div className="description-text">
                 <p key={'content'+index} className="description-text">{list[index]}</p>

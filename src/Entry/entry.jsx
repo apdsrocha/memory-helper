@@ -6,13 +6,18 @@ import EntryList from './entryList'
 export default class Entry extends Component {
     constructor(props) {
         super(props)
-        this.state = { description: '', location: '', list: [], locationList: [], userLat: '', userLong: ''}
+        this.state = { 
+            description: '', 
+            location: '', 
+            list: [], 
+            locationList: [], 
+            userLat: '', 
+            userLong: ''}
 
         this.handleDescription = this.handleDescription.bind(this)
         this.handleLocation = this.handleLocation.bind(this)
         this.handleAdd = this.handleAdd.bind(this)
         this.cleanInput = this.cleanInput.bind(this)
-
     }
 
     handleDescription(e) {
@@ -49,7 +54,6 @@ export default class Entry extends Component {
                 </div>
                 <div className="entries__list">
                     <h2 className="entries__title">{this.state.list.length !== 0 ? 'Remember when...' : ''}</h2>
-
                     <EntryList list={this.state.list} 
                     locationList={this.state.locationList} 
                     location={this.state.location}

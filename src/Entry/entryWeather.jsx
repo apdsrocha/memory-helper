@@ -54,7 +54,7 @@ class EntryWeather extends Component {
 render() {
     return ( 
         <div>
-            { this.state.error !== null ? <h4>Invalid city, try again.</h4> : 
+            { this.state.error !== null ? <h4 className="error-handling">Invalid city, try again.</h4> : 
             <div className="weather"> 
             <div className="img-icon">
             {(() => {
